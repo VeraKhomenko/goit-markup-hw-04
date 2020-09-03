@@ -16,7 +16,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   background: var(--primary-background-color);
   color: var(--primary-text-color);
 }
@@ -77,98 +76,127 @@ p {
 .fourrowel {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
+}
 
+/* li .sociallinks:last-child, */
+.flexlist .fourrowel:last-child,
+.flexlist .flexelement:last-child {
+  margin-right: 0;
+}
+
+/* стили svg */
+
+svg {
+  display: inline;
+}
+
+.icon {
+  display: inline-block;
+  outline: 1px solid red;
+  width: 20px;
+  height: 20px;
+
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.sociallinks {
+  margin: 16px 32px 27px 32px;
+  /* margin: 30px; */
+  text-align: center;
+}
+
+.sociallinks a {
+  /* display: inline-block; */
+  padding: 0;
+  border: 0;
+  height: 44px;
+  width: 44px;
+  color: #000;
+  outline: 1px solid red;
+  border-radius: 50%;
+  background-color: royalblue;
+  /* font-size: 0; */
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 
 .iconfeatures::before {
   content: '';
   display: block;
   height: 120px;
-  background: #F5F4FA;
-  outline: 1px solid red;
+  background: #f5f4fa;
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .iconfeatures:nth-child(1)::before {
-  background-image: url(../svg/antenna.svg);
+  background-image: url(../images/antenna.svg);
 }
 
 .iconfeatures:nth-child(2)::before {
-  background-image: url(../svg/clock.svg);
+  background-image: url(../images/clock.svg);
 }
 
 .iconfeatures:nth-child(3)::before {
-  background-image: url(../svg/diagram.svg);
+  background-image: url(../images/diagram.svg);
 }
 
 .iconfeatures:nth-child(4)::before {
-  background-image: url(../svg/astronaut.svg);
-}
-
-.flexlist .fourrowel:last-child,
-.flexlist .flexelement:last-child {
-  margin-right: 0;
+  background-image: url(../images/astronaut.svg);
 }
 
 /* индивидуальные */
+
 .comelement {
   background-color: var(--opposite-text-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.contact-link::before {
-  display: inline-flex;
-  content: '';
-  /* align-content: center; */
-  margin-right: 10px;
-  background-repeat: no-repeat;
-  /* background-size: contain; */
-  background-position: 50% 50%;
-  /* position: relative; */
+
+.contact-link {
+  outline: 1px solid fuchsia;
+  align-items: center;
+  fill: currentColor;
 }
 
+/*
 .contact-link.mail::before {
   width: 16px;
-  background-image: url(../svg/envelope.svg);
-}
+  background-image: url(../svg/envelope.svg); 
+}*/
 
-.contact-link.phone::before {
+/* .contact-link.phone::before {
   width: 10px;
   height: 16px;
-  background-image: url(../svg/phone.svg);
-}
+  background-image: url(../svg/phone.svg); 
+}*/
 
 .portfolioelement {
   background-color: var(--opposite-text-color);
-  border: 1px solid #EEEEEE;
-
+  border: 1px solid #eeeeee;
 }
 
 .maxindented {
-
   height: 600px;
 
   padding-top: 200px;
   padding-bottom: 200px;
   margin-bottom: 94px;
   color: var(--opposite-text-color);
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 
-  background-image: linear-gradient(to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bgi.jpg);
 
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: auto;
 }
-
 
 .container-banner {
   max-width: 726px;
@@ -262,7 +290,7 @@ li div.signature {
 }
 
 /* логотип */
-.logo .focused {
+.logo .logostudio {
   margin-top: 0;
   font-family: Raleway;
   font-size: 26px;
@@ -323,8 +351,6 @@ footer {
   color: var(--opposite-text-color);
   background: var(--btn-footer-color);
 }
-
-
 
 .list .contact-link-footer {
   color: rgba(255, 255, 255, 0.6);
@@ -397,15 +423,15 @@ address {
   color: var(--primary-text-color);
 }
 
-.contact-link.mail:hover::before,
-.contact-link.mail:focus::before {
-  background-image: url(../svg/envelopeblue.svg);
-}
+/* .contact-link.mail:hover::before,
+.contact-link.mail:focus::before { */
+/* background-image: url(../svg/envelopeblue.svg); 
+}*/
 
-.contact-link.phone:hover::before,
+/* .contact-link.phone:hover::before,
 .contact-link.phone:focus::before {
   background-image: url(../svg/phoneblue.svg);
-}
+} */
 
 .main-menu .focused.current,
 .focused:hover,
